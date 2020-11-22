@@ -3,7 +3,23 @@ import PropTypes from 'prop-types';
 import { Button as ButtonWSR } from 'wix-style-react';
 
 export interface ButtonProps {
-  text: string;
+  label: string;
+  disabled: boolean;
+  ellipsis: boolean;
+  fullWidth: boolean;
+  prefixIcon?: React.ReactElement<any>;
+  priority: 'primary' | 'secondary';
+  showTooltip: boolean;
+  size: 'tiny' | 'small' | 'medium' | 'large';
+  skin: 'standard'
+      | 'inverted'
+      | 'destructive'
+      | 'premium'
+      | 'dark'
+      | 'light'
+      | 'transparent'
+      | 'premium-light';
+  suffixIcon?: React.ReactElement<any>;
   onClick?: () => void;
 }
 
@@ -16,7 +32,44 @@ class Button extends React.Component<ButtonProps, any> {
     /**
      * Label of the button.
      */
-    text: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    /**
+     * Applies disabled styles
+     */
+    disabled: PropTypes.bool,
+    /**
+     * Should the text get ellipsized with tooltip,
+     * or should it get broken into lines when it reaches the end of its container
+     */
+    ellipsis: PropTypes.bool,
+    /**
+     * Sets button width to 100%
+     */
+    fullWidth: PropTypes.bool,
+    /**
+     * Element based icon (svg, image etc.)
+     */
+    prefixIcon: PropTypes.node,
+    /**
+     * Priority of Button content
+     */
+    priority: PropTypes.oneOf(['primary', 'secondary']),
+    /**
+     * True by default, set it to false in order to show ellipsis without a tooltip.
+     */
+    showTooltip: PropTypes.bool,
+    /**
+     * Size of Button content
+     */
+    size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large']),
+    /**
+     * Skins of Button content
+     */
+    skin: PropTypes.oneOf(['standard', 'inverted', 'destructive', 'premium', 'dark', 'light', 'transparent', 'premium-light']),
+    /**
+     * Element based icon (svg, image etc.)
+     */
+    suffixIcon: PropTypes.node,
     /**
      * Triggered when the user clicks on the button
      */
@@ -24,7 +77,14 @@ class Button extends React.Component<ButtonProps, any> {
   };
 
   static defaultProps: ButtonProps = {
-    text: 'Button',
+    label: 'Button',
+    disabled: false,
+    ellipsis: false,
+    fullWidth: false,
+    priority: 'primary',
+    showTooltip: false,
+    size: 'medium',
+    skin: 'standard',
   };
 
   // constructor(props: PrimaryButtonProps) {
@@ -43,11 +103,31 @@ class Button extends React.Component<ButtonProps, any> {
 
   render() {
     const {
-      text
+      label,
+      disabled,
+      ellipsis,
+      fullWidth,
+      prefixIcon,
+      priority,
+      showTooltip,
+      size,
+      skin,
+      suffixIcon
     } = this.props;
     return (
-        <ButtonWSR onClick={this.handleButtonClick}>
-          {text}
+        <ButtonWSR
+            disabled={disabled}
+            ellipsis={ellipsis}
+            fullWidth={fullWidth}
+            prefixIcon={prefixIcon}
+            showTooltip={showTooltip}
+            priority={priority}
+            size={size}
+            skin={skin}
+            suffixIcon={suffixIcon}
+            onClick={this.handleButtonClick}
+        >
+          {label}
         </ButtonWSR>
     );
   }
