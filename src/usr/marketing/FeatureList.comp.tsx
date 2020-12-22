@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FeatureList as FeatureListWSR, FeatureListProps, FontUpgrade} from 'wix-style-react';
+import {FeatureList as FeatureListWSR, FeatureListProps} from 'wix-style-react';
 
 /**
  */
@@ -45,14 +45,12 @@ class FeatureList extends React.Component<FeatureListProps, any> {
             features
         } = this.props;
         return (
-            <FontUpgrade>
-                <FeatureListWSR
-                    dataHook={dataHook}
-                    className={className}
-                    cols={cols}
-                    features={features}
-                />
-            </FontUpgrade>
+            <FeatureListWSR
+                dataHook={dataHook}
+                className={className}
+                cols={cols}
+                features={features}
+            />
         );
     }
 }

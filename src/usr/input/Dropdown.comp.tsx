@@ -1,7 +1,6 @@
 import React from 'react';
-import {Dropdown as DropdownWSR, FontUpgrade, Input} from 'wix-style-react';
+import {Dropdown as DropdownWSR, Input} from 'wix-style-react';
 import {DropdownTypes} from './Dropdown.props';
-// import type {DropdownProps} from './Dropdown.props';
 
 /**
  * A Dropdown presents a list of options and allows a user to select one of the options.
@@ -94,74 +93,72 @@ const Dropdown = (props: any) => {
         initialSelectedId
     } = props;
     return (
-        <FontUpgrade>
-            <DropdownWSR
-                prefix={prefixNode}
-                suffix={suffixNode}
-                ariaControls={ariaControls}
-                ariaDescribedby={ariaDescribedby}
-                ariaLabel={ariaLabel}
-                autoFocus={autoFocus}
-                autoSelect={autoSelect}
-                dataHook={dataHook}
-                defaultValue={defaultValue}
-                disabled={disabled}
-                status={status}
-                statusMessage={statusMessage}
-                hideStatusSuffix={hideStatusSuffix}
-                forceFocus={forceFocus}
-                forceHover={forceHover}
-                id={id}
-                maxLength={maxLength}
-                menuArrow={menuArrow}
-                clearButton={clearButton}
-                className={className}
-                name={name}
-                noLeftBorderRadius={noLeftBorderRadius}
-                noRightBorderRadius={noRightBorderRadius}
-                placeholder={placeholder}
-                readOnly={readOnly}
-                disableEditing={disableEditing}
-                roundInput={roundInput}
-                rtl={rtl}
-                size={size}
-                tabIndex={tabIndex}
-                textOverflow={textOverflow}
-                tooltipPlacement={tooltipPlacement}
-                type={type}
-                value={value}
-                withSelection={withSelection}
-                required={required}
-                min={min}
-                max={max}
-                step={step}
-                pattern={pattern}
-                focusOnSelectedOption={focusOnSelectedOption}
-                overflow={overflow}
-                visible={visible}
-                options={options}
-                selectedId={selectedId}
-                fixedHeader={fixedHeader}
-                fixedFooter={fixedFooter}
-                maxHeightPixels={maxHeightPixels}
-                minWidthPixels={minWidthPixels}
-                closeOnSelect={closeOnSelect}
-                selectedHighlight={selectedHighlight}
-                inContainer={inContainer}
-                infiniteScroll={infiniteScroll}
-                hasMore={hasMore}
-                markedOption={markedOption}
-                autocomplete={autocomplete}
-                dropdownWidth={dropdownWidth}
-                dropdownOffsetLeft={dropdownOffsetLeft}
-                showOptionsIfEmptyInput={showOptionsIfEmptyInput}
-                highlight={highlight}
-                native={native}
-                popoverProps={popoverProps}
-                initialSelectedId={initialSelectedId}
-                inputElement={(<Input/>)}
-            />
-        </FontUpgrade>
+        <DropdownWSR
+            prefix={prefixNode}
+            suffix={suffixNode}
+            ariaControls={ariaControls}
+            ariaDescribedby={ariaDescribedby}
+            ariaLabel={ariaLabel}
+            autoFocus={autoFocus}
+            autoSelect={autoSelect}
+            dataHook={dataHook}
+            defaultValue={defaultValue}
+            disabled={disabled}
+            status={status}
+            statusMessage={statusMessage}
+            hideStatusSuffix={hideStatusSuffix}
+            forceFocus={forceFocus}
+            forceHover={forceHover}
+            id={id}
+            maxLength={maxLength}
+            menuArrow={menuArrow}
+            clearButton={clearButton}
+            className={className}
+            name={name}
+            noLeftBorderRadius={noLeftBorderRadius}
+            noRightBorderRadius={noRightBorderRadius}
+            placeholder={placeholder}
+            readOnly={readOnly}
+            disableEditing={disableEditing}
+            roundInput={roundInput}
+            rtl={rtl}
+            size={size}
+            tabIndex={tabIndex}
+            textOverflow={textOverflow}
+            tooltipPlacement={tooltipPlacement}
+            type={type}
+            value={value}
+            withSelection={withSelection}
+            required={required}
+            min={min}
+            max={max}
+            step={step}
+            pattern={pattern}
+            focusOnSelectedOption={focusOnSelectedOption}
+            overflow={overflow}
+            visible={visible}
+            options={options}
+            selectedId={selectedId}
+            fixedHeader={fixedHeader}
+            fixedFooter={fixedFooter}
+            maxHeightPixels={maxHeightPixels}
+            minWidthPixels={minWidthPixels}
+            closeOnSelect={closeOnSelect}
+            selectedHighlight={selectedHighlight}
+            inContainer={inContainer}
+            infiniteScroll={infiniteScroll}
+            hasMore={hasMore}
+            markedOption={markedOption}
+            autocomplete={autocomplete}
+            dropdownWidth={dropdownWidth}
+            dropdownOffsetLeft={dropdownOffsetLeft}
+            showOptionsIfEmptyInput={showOptionsIfEmptyInput}
+            highlight={highlight}
+            native={native}
+            popoverProps={popoverProps}
+            initialSelectedId={initialSelectedId}
+            inputElement={(<Input/>)}
+        />
     );
 }
 

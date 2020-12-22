@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FontUpgrade, MarketingPageLayout as MarketingPageLayoutWSR, MarketingPageLayoutProps} from 'wix-style-react';
+import {MarketingPageLayout as MarketingPageLayoutWSR, MarketingPageLayoutProps} from 'wix-style-react';
 
 /**
  */
@@ -53,19 +53,17 @@ class MarketingPageLayout extends React.Component<MarketingPageLayoutProps, any>
             footer
         } = this.props;
         return (
-            <FontUpgrade>
-                <MarketingPageLayoutWSR
-                    dataHook={dataHook}
-                    className={className}
-                    horizontalSize={horizontalSize}
-                    verticalSize={verticalSize}
-                    removeImageHorizontalPadding={removeImageHorizontalPadding}
-                    removeImageVerticalPadding={removeImageVerticalPadding}
-                    content={content}
-                    image={image}
-                    footer={footer}
-                />
-            </FontUpgrade>
+            <MarketingPageLayoutWSR
+                dataHook={dataHook}
+                className={className}
+                horizontalSize={horizontalSize}
+                verticalSize={verticalSize}
+                removeImageHorizontalPadding={removeImageHorizontalPadding}
+                removeImageVerticalPadding={removeImageVerticalPadding}
+                content={content}
+                image={image}
+                footer={footer}
+            />
         );
     }
 }

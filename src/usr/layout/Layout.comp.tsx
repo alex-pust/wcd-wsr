@@ -1,5 +1,5 @@
 import React from 'react';
-import {FontUpgrade, Layout as LayoutWSR} from 'wix-style-react';
+import {Layout as LayoutWSR} from 'wix-style-react';
 import type {LayoutProps} from './Layout.props';
 import {LayoutTypes} from './Layout.props';
 
@@ -8,17 +8,15 @@ import {LayoutTypes} from './Layout.props';
  */
 const Layout = ({alignItems, children, cols, gap, justifyItems, rowHeight}: LayoutProps) => {
     return (
-        <FontUpgrade>
-            <LayoutWSR
-                alignItems={alignItems}
-                cols={cols}
-                gap={gap}
-                justifyItems={justifyItems}
-                rowHeight={rowHeight}
-            >
-                {children}
-            </LayoutWSR>
-        </FontUpgrade>
+        <LayoutWSR
+            alignItems={alignItems}
+            cols={cols}
+            gap={gap}
+            justifyItems={justifyItems}
+            rowHeight={rowHeight}
+        >
+            {children}
+        </LayoutWSR>
     );
 }
 

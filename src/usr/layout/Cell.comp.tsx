@@ -1,5 +1,5 @@
 import React from 'react';
-import {Cell as CellWSR, FontUpgrade} from 'wix-style-react';
+import {Cell as CellWSR} from 'wix-style-react';
 import type {CellProps} from './Cell.props';
 import {CellTypes} from './Cell.props';
 
@@ -8,15 +8,13 @@ import {CellTypes} from './Cell.props';
  */
 const Cell = ({span, children, vertical, rows}: CellProps) => {
     return (
-        <FontUpgrade>
-            <CellWSR
-                span={span}
-                vertical={vertical}
-                rows={rows}
-            >
-                {children}
-            </CellWSR>
-        </FontUpgrade>
+        <CellWSR
+            span={span}
+            vertical={vertical}
+            rows={rows}
+        >
+            {children}
+        </CellWSR>
     );
 }
 

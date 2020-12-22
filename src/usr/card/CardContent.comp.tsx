@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Card as CardWSR, FontUpgrade} from 'wix-style-react';
+import {Card as CardWSR} from 'wix-style-react';
 
 export interface CardContentProps {
     children?: React.ReactNode;
@@ -30,11 +30,9 @@ class CardContent extends React.Component<CardContentProps, any> {
     render() {
         const {children, size} = this.props;
         return (
-            <FontUpgrade>
-                <CardWSR.Content size={size}>
-                    {children}
-                </CardWSR.Content>
-            </FontUpgrade>
+            <CardWSR.Content size={size}>
+                {children}
+            </CardWSR.Content>
         );
     }
 }

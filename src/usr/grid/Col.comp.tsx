@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Col as ColWSR, FontUpgrade} from 'wix-style-react';
+import {Col as ColWSR} from 'wix-style-react';
 
 export interface ColProps {
     child: React.ReactNode;
@@ -38,11 +38,9 @@ class Col extends React.Component<ColProps, any> {
     render() {
         const {span, rtl, child} = this.props;
         return (
-            <FontUpgrade>
-                <ColWSR span={span} rtl={rtl}>
-                    {child}
-                </ColWSR>
-            </FontUpgrade>
+            <ColWSR span={span} rtl={rtl}>
+                {child}
+            </ColWSR>
         );
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Container as ContainerWSR, FontUpgrade} from 'wix-style-react';
+import {Container as ContainerWSR} from 'wix-style-react';
 
 export interface ContainerProps {
     children: React.ReactNode[];
@@ -32,11 +32,9 @@ class Container extends React.Component<ContainerProps, any> {
     render() {
         const {fluid, children} = this.props;
         return (
-            <FontUpgrade>
-                <ContainerWSR fluid={fluid}>
-                    {children}
-                </ContainerWSR>
-            </FontUpgrade>
+            <ContainerWSR fluid={fluid}>
+                {children}
+            </ContainerWSR>
         );
     }
 }

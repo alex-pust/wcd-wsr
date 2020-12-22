@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FontUpgrade, Image as ImageWSR} from 'wix-style-react';
+import {Image as ImageWSR} from 'wix-style-react';
 
 export interface ImageProps {
     height?: string;
@@ -59,17 +59,15 @@ class Image extends React.Component<ImageProps, any> {
             position
         } = this.props;
         return (
-            <FontUpgrade>
-                <ImageWSR
-                    dataHook={dataHook}
-                    className={className}
-                    src={src}
-                    width={width}
-                    height={height}
-                    fit={fit}
-                    position={position}
-                />
-            </FontUpgrade>
+            <ImageWSR
+                dataHook={dataHook}
+                className={className}
+                src={src}
+                width={width}
+                height={height}
+                fit={fit}
+                position={position}
+            />
         );
     }
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-    FontUpgrade,
     MarketingPageLayoutContent as MarketingPageLayoutContentWSR,
     MarketingPageLayoutContentProps
 } from 'wix-style-react';
@@ -52,18 +51,16 @@ class MarketingPageLayoutContent extends React.Component<MarketingPageLayoutCont
             actions
         } = this.props;
         return (
-            <FontUpgrade>
-                <MarketingPageLayoutContentWSR
-                    dataHook={dataHook}
-                    className={className}
-                    size={size}
-                    overline={overline}
-                    title={title}
-                    subtitle={subtitle}
-                    content={content}
-                    actions={actions}
-                />
-            </FontUpgrade>
+            <MarketingPageLayoutContentWSR
+                dataHook={dataHook}
+                className={className}
+                size={size}
+                overline={overline}
+                title={title}
+                subtitle={subtitle}
+                content={content}
+                actions={actions}
+            />
         );
     }
 }

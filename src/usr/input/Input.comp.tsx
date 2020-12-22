@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FontUpgrade, Input as InputWSR, InputProps} from 'wix-style-react';
+import {Input as InputWSR, InputProps} from 'wix-style-react';
 import pickWithValues from '../utils/pickWithValues';
 
 /**
@@ -165,9 +165,7 @@ class Input extends React.Component<InputProps, any> {
     render() {
         const propsWithValues: InputProps = pickWithValues(this.props);
         return (
-            <FontUpgrade>
-                <InputWSR {...propsWithValues} />
-            </FontUpgrade>
+            <InputWSR {...propsWithValues} />
         );
     }
 }

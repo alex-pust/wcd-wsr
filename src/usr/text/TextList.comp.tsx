@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FontUpgrade, Text} from 'wix-style-react';
+import {Text} from 'wix-style-react';
 
 export interface TextListProps {
     ellipsis?: boolean;
@@ -71,26 +71,24 @@ class TextList extends React.Component<TextListProps, any> {
             listItems
         } = this.props;
         return (
-            <FontUpgrade>
-                <Text
-                    ellipsis={ellipsis}
-                    light={light}
-                    secondary={secondary}
-                    size={size}
-                    skin={skin}
-                    tagName={tagName as any} // should be a list of all HTML tags
-                    weight={weight}
-                    listStyle={listStyle}
-                >
-                    <ul>
-                        {listItems?.map((listItem, idx) => {
-                            return (
-                                <li key={`listItem${idx}`}>{listItem}</li>
-                            );
-                        })}
-                    </ul>
-                </Text>
-            </FontUpgrade>
+            <Text
+                ellipsis={ellipsis}
+                light={light}
+                secondary={secondary}
+                size={size}
+                skin={skin}
+                tagName={tagName as any} // should be a list of all HTML tags
+                weight={weight}
+                listStyle={listStyle}
+            >
+                <ul>
+                    {listItems?.map((listItem, idx) => {
+                        return (
+                            <li key={`listItem${idx}`}>{listItem}</li>
+                        );
+                    })}
+                </ul>
+            </Text>
         );
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FontUpgrade, TestimonialList as TestimonialListWSR, TestimonialListProps} from 'wix-style-react';
+import {TestimonialList as TestimonialListWSR, TestimonialListProps} from 'wix-style-react';
 
 /**
  */
@@ -45,14 +45,12 @@ class TestimonialList extends React.Component<TestimonialListProps, any> {
             testimonials,
         } = this.props;
         return (
-            <FontUpgrade>
-                <TestimonialListWSR
-                    dataHook={dataHook}
-                    className={className}
-                    cols={cols}
-                    testimonials={testimonials}
-                />
-            </FontUpgrade>
+            <TestimonialListWSR
+                dataHook={dataHook}
+                className={className}
+                cols={cols}
+                testimonials={testimonials}
+            />
         );
     }
 }

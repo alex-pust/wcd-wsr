@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FontUpgrade, Page as PageWSR} from 'wix-style-react';
+import {Page as PageWSR} from 'wix-style-react';
 
 export interface PageProps {
     pageHeader?: {
@@ -145,23 +145,21 @@ class Page extends React.Component<PageProps, any> {
             );
         }
         return (
-            <FontUpgrade>
-                <PageWSR
-                    backgroundImageUrl={backgroundImageUrl}
-                    maxWidth={maxWidth}
-                    minWidth={minWidth}
-                    horizontalScroll={horizontalScroll}
-                    height={height}
-                    sidePadding={sidePadding}
-                    zIndex={zIndex}
-                >
-                    {headerElement}
-                    {tailElement}
-                    <PageWSR.Content fullScreen={fullScreenContent}>
-                        {pageContent}
-                    </PageWSR.Content>
-                </PageWSR>
-            </FontUpgrade>
+            <PageWSR
+                backgroundImageUrl={backgroundImageUrl}
+                maxWidth={maxWidth}
+                minWidth={minWidth}
+                horizontalScroll={horizontalScroll}
+                height={height}
+                sidePadding={sidePadding}
+                zIndex={zIndex}
+            >
+                {headerElement}
+                {tailElement}
+                <PageWSR.Content fullScreen={fullScreenContent}>
+                    {pageContent}
+                </PageWSR.Content>
+            </PageWSR>
         );
     }
 }

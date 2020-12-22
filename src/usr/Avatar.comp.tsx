@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Avatar as AvatarWSR, FontUpgrade} from 'wix-style-react';
+import {Avatar as AvatarWSR} from 'wix-style-react';
 
 export interface AvatarProps {
     name?: string;
@@ -134,26 +134,24 @@ class Avatar extends React.Component<AvatarProps, any> {
             imgProps.src = imgSrc;
         }
         return (
-            <FontUpgrade>
-                <AvatarWSR
-                    size={size}
-                    title={title}
-                    dataHook={dataHook}
-                    className={className}
-                    name={name}
-                    text={text}
-                    placeholder={placeholder}
-                    imgProps={imgProps}
-                    ariaLabel={ariaLabel}
-                    color={color}
-                    shape={shape}
-                    presence={presence}
-                    indication={indication}
-                    customIndication={customIndication}
-                    showIndicationOnHover={showIndicationOnHover}
-                    loading={loading}
-                />
-            </FontUpgrade>
+            <AvatarWSR
+                size={size}
+                title={title}
+                dataHook={dataHook}
+                className={className}
+                name={name}
+                text={text}
+                placeholder={placeholder}
+                imgProps={imgProps}
+                ariaLabel={ariaLabel}
+                color={color}
+                shape={shape}
+                presence={presence}
+                indication={indication}
+                customIndication={customIndication}
+                showIndicationOnHover={showIndicationOnHover}
+                loading={loading}
+            />
         );
     }
 }

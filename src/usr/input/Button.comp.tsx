@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button as ButtonWSR, FontUpgrade} from 'wix-style-react';
+import {Button as ButtonWSR} from 'wix-style-react';
 
 export interface ButtonProps {
     label: string;
@@ -115,22 +115,20 @@ class Button extends React.Component<ButtonProps, any> {
             suffixIcon
         } = this.props;
         return (
-            <FontUpgrade>
-                <ButtonWSR
-                    disabled={disabled}
-                    ellipsis={ellipsis}
-                    fullWidth={fullWidth}
-                    prefixIcon={prefixIcon}
-                    showTooltip={showTooltip}
-                    priority={priority}
-                    size={size}
-                    skin={skin}
-                    suffixIcon={suffixIcon}
-                    onClick={this.handleButtonClick}
-                >
-                    {label}
-                </ButtonWSR>
-            </FontUpgrade>
+            <ButtonWSR
+                disabled={disabled}
+                ellipsis={ellipsis}
+                fullWidth={fullWidth}
+                prefixIcon={prefixIcon}
+                showTooltip={showTooltip}
+                priority={priority}
+                size={size}
+                skin={skin}
+                suffixIcon={suffixIcon}
+                onClick={this.handleButtonClick}
+            >
+                {label}
+            </ButtonWSR>
         );
     }
 }

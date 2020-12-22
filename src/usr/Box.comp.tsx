@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Box as BoxWSR, BoxProps as BoxPropsWSR, FontUpgrade} from 'wix-style-react';
+import {Box as BoxWSR, BoxProps as BoxPropsWSR} from 'wix-style-react';
 import tryGetNumber from './utils/tryGetNumber';
 
 class Box extends React.Component<BoxPropsWSR, any> {
@@ -105,33 +105,31 @@ class Box extends React.Component<BoxPropsWSR, any> {
             minWidth, maxWidth, width, minHeight, maxHeight, height, children
         } = this.props;
         return (
-            <FontUpgrade>
-                <BoxWSR
-                    className={className}
-                    inline={inline}
-                    direction={direction}
-                    align={align}
-                    verticalAlign={verticalAlign}
-                    padding={tryGetNumber(padding)}
-                    paddingTop={tryGetNumber(paddingTop)}
-                    paddingRight={tryGetNumber(paddingRight)}
-                    paddingBottom={tryGetNumber(paddingBottom)}
-                    paddingLeft={tryGetNumber(paddingLeft)}
-                    margin={tryGetNumber(margin)}
-                    marginTop={tryGetNumber(marginTop)}
-                    marginRight={tryGetNumber(marginRight)}
-                    marginBottom={tryGetNumber(marginBottom)}
-                    marginLeft={tryGetNumber(marginLeft)}
-                    minWidth={tryGetNumber(minWidth)}
-                    maxWidth={tryGetNumber(maxWidth)}
-                    width={tryGetNumber(width)}
-                    minHeight={tryGetNumber(minHeight)}
-                    maxHeight={tryGetNumber(maxHeight)}
-                    height={tryGetNumber(height)}
-                >
-                    {children}
-                </BoxWSR>
-            </FontUpgrade>
+            <BoxWSR
+                className={className}
+                inline={inline}
+                direction={direction}
+                align={align}
+                verticalAlign={verticalAlign}
+                padding={tryGetNumber(padding)}
+                paddingTop={tryGetNumber(paddingTop)}
+                paddingRight={tryGetNumber(paddingRight)}
+                paddingBottom={tryGetNumber(paddingBottom)}
+                paddingLeft={tryGetNumber(paddingLeft)}
+                margin={tryGetNumber(margin)}
+                marginTop={tryGetNumber(marginTop)}
+                marginRight={tryGetNumber(marginRight)}
+                marginBottom={tryGetNumber(marginBottom)}
+                marginLeft={tryGetNumber(marginLeft)}
+                minWidth={tryGetNumber(minWidth)}
+                maxWidth={tryGetNumber(maxWidth)}
+                width={tryGetNumber(width)}
+                minHeight={tryGetNumber(minHeight)}
+                maxHeight={tryGetNumber(maxHeight)}
+                height={tryGetNumber(height)}
+            >
+                {children}
+            </BoxWSR>
         );
     }
 }

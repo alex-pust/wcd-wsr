@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Card as CardWSR, FontUpgrade} from 'wix-style-react';
+import {Card as CardWSR} from 'wix-style-react';
 
 export interface CardProps {
     children?: React.ReactNode;
@@ -48,16 +48,14 @@ class Card extends React.Component<CardProps, any> {
     render() {
         const {children, controls, hideOverflow, showShadow, stretchVertically} = this.props;
         return (
-            <FontUpgrade>
-                <CardWSR
-                    controls={controls}
-                    hideOverflow={hideOverflow}
-                    showShadow={showShadow}
-                    stretchVertically={stretchVertically}
-                >
-                    {children}
-                </CardWSR>
-            </FontUpgrade>
+            <CardWSR
+                controls={controls}
+                hideOverflow={hideOverflow}
+                showShadow={showShadow}
+                stretchVertically={stretchVertically}
+            >
+                {children}
+            </CardWSR>
         );
     }
 }

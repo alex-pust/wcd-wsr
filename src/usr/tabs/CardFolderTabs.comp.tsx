@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {CardFolderTabs as CardFolderTabsX, FontUpgrade} from 'wix-style-react';
+import {CardFolderTabs as CardFolderTabsX} from 'wix-style-react';
 import tryGetNumber from 'usr/utils/tryGetNumber';
 
 export interface CardFolderTabsProps {
@@ -94,26 +94,24 @@ class CardFolderTabs extends React.Component<CardFolderTabsProps, CardFolderTabs
         const {activeTabId} = this.state;
         const {tabs, maxTabWidth} = this.props;
         return (
-            <FontUpgrade>
-                <CardFolderTabsX
-                    activeId={activeTabId || ''}
-                    maxTabWidth={tryGetNumber(maxTabWidth)}
-                    onTabChange={this.handleTabChange}
-                >
-                    {tabs?.map(tab => {
-                        return (
-                            <CardFolderTabsX.Tab
-                                key={tab.id}
-                                id={tab.id}
-                                name={tab.name}
-                                disabled={tab.disabled}
-                            >
-                                {tab.tabContent}
-                            </CardFolderTabsX.Tab>
-                        )
-                    })}
-                </CardFolderTabsX>
-            </FontUpgrade>
+            <CardFolderTabsX
+                activeId={activeTabId || ''}
+                maxTabWidth={tryGetNumber(maxTabWidth)}
+                onTabChange={this.handleTabChange}
+            >
+                {tabs?.map(tab => {
+                    return (
+                        <CardFolderTabsX.Tab
+                            key={tab.id}
+                            id={tab.id}
+                            name={tab.name}
+                            disabled={tab.disabled}
+                        >
+                            {tab.tabContent}
+                        </CardFolderTabsX.Tab>
+                    )
+                })}
+            </CardFolderTabsX>
         );
     }
 }

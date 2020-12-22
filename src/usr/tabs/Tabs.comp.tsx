@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FontUpgrade, Tabs as TabsWSR, TabsProps} from 'wix-style-react';
+import {Tabs as TabsWSR, TabsProps} from 'wix-style-react';
 
 /**
  * Tabs component enables navigation between content at the same page.
@@ -67,18 +67,16 @@ class Tabs extends React.Component<TabsProps, any> {
     render() {
         const {items, activeId, hasDivider, minWidth, type, size, sideContent, width} = this.props;
         return (
-            <FontUpgrade>
-                <TabsWSR
-                    items={items}
-                    activeId={activeId}
-                    hasDivider={hasDivider}
-                    minWidth={minWidth}
-                    type={type}
-                    size={size}
-                    sideContent={sideContent}
-                    width={width}
-                />
-            </FontUpgrade>
+            <TabsWSR
+                items={items}
+                activeId={activeId}
+                hasDivider={hasDivider}
+                minWidth={minWidth}
+                type={type}
+                size={size}
+                sideContent={sideContent}
+                width={width}
+            />
         );
     }
 }

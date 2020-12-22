@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FontUpgrade, Tooltip as TooltipWSR, TooltipProps as TooltipPropsWSR} from 'wix-style-react';
+import {Tooltip as TooltipWSR, TooltipProps as TooltipPropsWSR} from 'wix-style-react';
 
 export type TooltipProps = TooltipPropsWSR & {
     child?: React.ReactNode;
@@ -67,6 +67,7 @@ class Tooltip extends React.Component<TooltipProps, any> {
         textAlign: 'start',
         zIndex: 6000
     };
+
     render() {
         const {
             child,
@@ -87,26 +88,24 @@ class Tooltip extends React.Component<TooltipProps, any> {
             zIndex
         } = this.props;
         return (
-            <FontUpgrade>
-                <TooltipWSR
-                    content={contentElement ? contentElement : contentText}
-                    textAlign={textAlign}
-                    enterDelay={enterDelay}
-                    exitDelay={exitDelay}
-                    moveBy={moveBy}
-                    moveArrowTo={moveArrowTo}
-                    appendTo={appendTo}
-                    flip={flip}
-                    fixed={fixed}
-                    maxWidth={maxWidth}
-                    placement={placement}
-                    disabled={disabled}
-                    size={size}
-                    zIndex={zIndex}
-                >
-                    {child}
-                </TooltipWSR>
-            </FontUpgrade>
+            <TooltipWSR
+                content={contentElement ? contentElement : contentText}
+                textAlign={textAlign}
+                enterDelay={enterDelay}
+                exitDelay={exitDelay}
+                moveBy={moveBy}
+                moveArrowTo={moveArrowTo}
+                appendTo={appendTo}
+                flip={flip}
+                fixed={fixed}
+                maxWidth={maxWidth}
+                placement={placement}
+                disabled={disabled}
+                size={size}
+                zIndex={zIndex}
+            >
+                {child}
+            </TooltipWSR>
         );
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FontUpgrade, FormField as FormFieldWSR} from 'wix-style-react';
+import {FormField as FormFieldWSR} from 'wix-style-react';
 import {FormFieldTooltipTypes} from './FormFieldTooltip.props';
 
 export interface FormFieldProps {
@@ -95,23 +95,21 @@ class FormField extends React.Component<FormFieldProps, any> {
             inputElement
         } = this.props;
         return (
-            <FontUpgrade>
-                <FormFieldWSR
-                    charCount={charCount}
-                    suffix={suffix}
-                    stretchContent={stretchContent}
-                    label={label}
-                    labelSize={labelSize}
-                    labelPlacement={labelPlacement}
-                    labelAlignment={labelAlignment}
-                    required={required}
-                    infoContent={infoContent}
-                    infoTooltipProps={infoTooltipProps}
-                    id={id}
-                >
-                    {inputElement}
-                </FormFieldWSR>
-            </FontUpgrade>
+            <FormFieldWSR
+                charCount={charCount}
+                suffix={suffix}
+                stretchContent={stretchContent}
+                label={label}
+                labelSize={labelSize}
+                labelPlacement={labelPlacement}
+                labelAlignment={labelAlignment}
+                required={required}
+                infoContent={infoContent}
+                infoTooltipProps={infoTooltipProps}
+                id={id}
+            >
+                {inputElement}
+            </FormFieldWSR>
         );
     }
 }

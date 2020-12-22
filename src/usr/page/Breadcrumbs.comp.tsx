@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Breadcrumbs as BreadcrumbsWSR, BreadcrumbsProps, FontUpgrade} from 'wix-style-react';
+import {Breadcrumbs as BreadcrumbsWSR, BreadcrumbsProps} from 'wix-style-react';
 
 /**
  * Breadcrumbs is a type of navigation scheme which reveals the user’s location in a website or Web application.
@@ -60,15 +60,13 @@ class Breadcrumbs extends React.Component<BreadcrumbsProps, any> {
             items, activeId, size, itemMaxWidth, theme
         } = this.props;
         return (
-            <FontUpgrade>
-                <BreadcrumbsWSR
-                    items={items}
-                    activeId={activeId}
-                    size={size}
-                    itemMaxWidth={itemMaxWidth}
-                    theme={theme}
-                />
-            </FontUpgrade>
+            <BreadcrumbsWSR
+                items={items}
+                activeId={activeId}
+                size={size}
+                itemMaxWidth={itemMaxWidth}
+                theme={theme}
+            />
         );
     }
 }

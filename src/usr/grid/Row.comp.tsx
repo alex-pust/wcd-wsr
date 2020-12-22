@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FontUpgrade, Row as RowWSR} from 'wix-style-react';
+import {Row as RowWSR} from 'wix-style-react';
 
 export interface RowProps {
     children: React.ReactNode[];
@@ -32,11 +32,9 @@ class Row extends React.Component<RowProps, any> {
     render() {
         const {stretchViewsVertically, children} = this.props;
         return (
-            <FontUpgrade>
-                <RowWSR stretchViewsVertically={stretchViewsVertically}>
-                    {children}
-                </RowWSR>
-            </FontUpgrade>
+            <RowWSR stretchViewsVertically={stretchViewsVertically}>
+                {children}
+            </RowWSR>
         );
     }
 }

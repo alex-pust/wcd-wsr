@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Card as CardWSR, FontUpgrade} from 'wix-style-react';
+import {Card as CardWSR} from 'wix-style-react';
 
 export interface CardSubheaderProps {
     title?: string;
@@ -30,9 +30,7 @@ class CardSubheader extends React.Component<CardSubheaderProps, any> {
     render() {
         const {title, suffix} = this.props;
         return (
-            <FontUpgrade>
-                <CardWSR.Subheader title={title} suffix={suffix}/>
-            </FontUpgrade>
+            <CardWSR.Subheader title={title} suffix={suffix}/>
         );
     }
 }
