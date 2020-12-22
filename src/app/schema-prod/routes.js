@@ -1,2 +1,2 @@
 
-export default [{"path":"/","pageName":"main"},{"path":"/main","pageName":"main"}];
+export default [{"path":"/","pageName":"main"},{"path":"/button-bar","pageName":"button-bar"},{"path":"/card","pageName":"card"},{"path":"/form","pageName":"form"},{"path":"/grid-layout","pageName":"grid-layout"},{"path":"/main","pageName":"main"},{"path":"/marketing-page-layout-1","pageName":"marketing-page-layout-1"},{"path":"/marketing-page-layout-2","pageName":"marketing-page-layout-2"},{"path":"/test-1","pageName":"test-1"},{"path":"/test-2","pageName":"test-2"}];

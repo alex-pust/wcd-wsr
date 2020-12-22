@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container as ContainerWSR } from 'wix-style-react';
+import {Container as ContainerWSR, FontUpgrade} from 'wix-style-react';
 
 export interface ContainerProps {
-  children: React.ReactNode[];
-  fluid: boolean;
+    children: React.ReactNode[];
+    fluid: boolean;
 }
 
 /**
@@ -12,31 +12,33 @@ export interface ContainerProps {
  */
 class Container extends React.Component<ContainerProps, any> {
 
-  static propTypes: PropTypes.InferProps<ContainerProps> = {
-    /**
-     * Should only be Rows although any node is allowed
-     */
-    children: PropTypes.arrayOf(PropTypes.element),
-    /**
-     * disable min/max width, use for smaller grids
-     */
-    fluid: PropTypes.bool,
+    static propTypes: PropTypes.InferProps<ContainerProps> = {
+        /**
+         * Should only be Rows although any node is allowed
+         */
+        children: PropTypes.arrayOf(PropTypes.element),
+        /**
+         * disable min/max width, use for smaller grids
+         */
+        fluid: PropTypes.bool,
 
-  };
+    };
 
-  static defaultProps: ContainerProps = {
-    children: [<span />],
-    fluid: false,
-  };
+    static defaultProps: ContainerProps = {
+        children: [<span/>],
+        fluid: false,
+    };
 
-  render() {
-    const { fluid, children } = this.props;
-    return (
-        <ContainerWSR fluid={fluid}>
-          {children}
-        </ContainerWSR>
-    );
-  }
+    render() {
+        const {fluid, children} = this.props;
+        return (
+            <FontUpgrade>
+                <ContainerWSR fluid={fluid}>
+                    {children}
+                </ContainerWSR>
+            </FontUpgrade>
+        );
+    }
 }
 
 export default Container;
